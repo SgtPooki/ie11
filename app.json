@@ -1,0 +1,7 @@
+{
+  "name": "ie11",
+  "description": "Image explorer eleven. Named ie11 just for fun.",
+  "repository": "https://github.com/SgtPooki/ie11",
+  "logo": "http://lorempixel.com/32/32/cats/",
+  "keywords": ["node", "express", "static"]
+}
