@@ -36,7 +36,7 @@ module.exports = function (request, response) {
                 .flatten()
                 .pluck('gallery')
                 .pluck('photos')
-                .flatten()
+                // .flatten()
                 .value();
 
             response.render('pages/index', {photos: photos});
