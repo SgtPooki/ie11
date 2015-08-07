@@ -39,7 +39,7 @@ module.exports = function (request, response) {
                 .flatten()
                 .value();
 
-            response.send(photos);
+            response.render('pages/index', {photos: photos});
         })
         .catch(function (error) {
             console.log('found error...');
