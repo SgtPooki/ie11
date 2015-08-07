@@ -21,6 +21,9 @@
   },
   "dependencies": {
     "ejs": "^2.3.3",
-    "express": "^4.13.3"
+    "express": "^4.13.3",
+    "lodash": "^3.10.1",
+    "promise": "^7.0.4",
+    "request": "^2.60.0"
   }
 }
