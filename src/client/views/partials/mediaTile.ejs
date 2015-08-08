@@ -1,11 +1,11 @@
 <div class="media">
   <div class="media-left">
-    <a href="#">
-      <img class="media-object" style="width: 100px;" src="<%= media.url %>" alt="<%= media.caption %>">
+    <a href="#0">
+      <img class="media-object" style="width: 100px;" src="<%= media.url %>" alt="<%= media.alt_text %>">
     </a>
   </div>
   <div class="media-body">
-    <h4 class="media-heading">Media heading</h4>
-    <%= media.caption %>
+    <h4 class="media-heading"><%= media.title %></h4>
+    <%- media.caption %>
   </div>
 </div>

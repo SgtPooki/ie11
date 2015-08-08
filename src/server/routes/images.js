@@ -23,7 +23,7 @@
 
 module.exports = function (request, response) {
     var promises = [
-        promiseHttpGet('http://data.nbcnews.com/drone/getbyid?id=newscms/entry/364286&output=today'),
+        promiseHttpGet('http://data.nbcnews.com/drone/getbyid?id=newscms/entry/371361&output=today'),
         promiseHttpGet('http://data.nbcnews.com/drone/getbyid?id=newscms/entry/367081&output=today'),
         promiseHttpGet('http://data.nbcnews.com/drone/getbyid?id=newscms/entry/364286&output=today')
     ];
@@ -36,7 +36,6 @@ module.exports = function (request, response) {
                 .flatten()
                 .pluck('gallery')
                 .pluck('photos')
-                // .flatten()
                 .value();
 
             response.render('pages/index', {photos: photos});
