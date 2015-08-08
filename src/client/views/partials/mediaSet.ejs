@@ -1,8 +1,9 @@
-
-<% mediaSets.forEach(function(mediaSet){ %>
-<div class="col-md-4">
-    <% mediaSet.forEach(function(mediaItem){ %>
-      <%- include('mediaTile.ejs', {media: mediaItem}) %>
+<section class="carousel">
+    <% mediaSets.forEach(function(mediaSet, index){ %>
+    <div class="col-md-4 carouselItem <%= index === 1 ? 'active' : '' %>">
+        <% mediaSet.forEach(function(mediaItem){ %>
+          <%- include('mediaTile.ejs', {media: mediaItem}) %>
+        <% }); %>
+    </div>
     <% }); %>
-</div>
-<% }); %>
+</section>
