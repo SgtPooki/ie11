@@ -28,6 +28,7 @@
     "express": "^4.13.3",
     "lodash": "^3.10.1",
     "promise": "^7.0.4",
-    "request": "^2.60.0"
+    "request": "^2.60.0",
+    "shelljs": "^0.5.1"
   }
 }

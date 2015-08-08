@@ -27,21 +27,29 @@ module.exports = function (request, response) {
         promiseHttpGet('http://data.nbcnews.com/drone/getbyid?id=newscms/entry/367081&output=today'),
         promiseHttpGet('http://data.nbcnews.com/drone/getbyid?id=newscms/entry/364286&output=today')
     ];
+    var processApiResults = function () {
+        Promise.all(promises)
+            .then(function (results) {
+                var photos = _(results)
+                    .map(JSON.parse)
+                    .pluck('results')
+                    .flatten()
+                    .pluck('gallery')
+                    .pluck('photos')
+                    .value();
 
-    Promise.all(promises)
-        .then(function (results) {
-            var photos = _(results)
-                .map(JSON.parse)
-                .pluck('results')
-                .flatten()
-                .pluck('gallery')
-                .pluck('photos')
-                .value();
+                response.render('pages/index', {photos: photos});
+            })
+            .catch(function (error) {
+                console.log('found error...');
+                console.log(error);
+            });
+    };
 
-            response.render('pages/index', {photos: photos});
-        })
-        .catch(function (error) {
-            console.log('found error...');
-            console.log(error);
-        });
+    if (process.env.NODE_ENV === 'development') {
+        exec('gulp build', {async: true}, processApiResults);
+    } else {
+        processApiResults();
+    }
+
 };
