@@ -1,4 +1,8 @@
 
-<% mediaSet.forEach(function(mediaItem){ %>
-  <%- include('mediaTile.ejs', {media: mediaItem}) %>
+<% mediaSets.forEach(function(mediaSet){ %>
+<div class="col-md-4">
+    <% mediaSet.forEach(function(mediaItem){ %>
+      <%- include('mediaTile.ejs', {media: mediaItem}) %>
+    <% }); %>
+</div>
 <% }); %>

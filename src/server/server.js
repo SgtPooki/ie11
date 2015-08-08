@@ -15,10 +15,6 @@ config.server.staticFolders.forEach(function (staticPath) {
 app.set('views', config.views.path);
 app.set('view engine', config.views.engine);
 
-// app.get('/', function (request, response) {
-//   response.render('pages/index');
-// });
-
 app.get('/', require('./routes/images'));
 
 app.listen(app.get('port'), function () {

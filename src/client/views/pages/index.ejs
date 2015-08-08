@@ -6,8 +6,6 @@
 
 <body>
 
-  <!-- <% include ../partials/nav.ejs %> -->
-
 <div class="jumbotron text-center">
   <div class="container">
     <h1>Checkout the images below</h1>
@@ -21,11 +19,7 @@
 </div>
 <div class="container">
   <div class="row">
-      <% photos.forEach(function(photoSet){ %>
-          <div class="col-md-4">
-              <%- include('../partials/mediaSet.ejs', {mediaSet: photoSet}) %>
-          </div>
-      <% }); %>
+    <%- include('../partials/mediaSet.ejs', {mediaSets: photos}) %>
   </div>
 </div>
 
