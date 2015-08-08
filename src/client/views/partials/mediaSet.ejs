@@ -1,9 +1,11 @@
-<section class="carousel">
-    <% mediaSets.forEach(function(mediaSet, index){ %>
-    <div class="col-md-4 carouselItem <%= index === 1 ? 'active' : '' %>">
-        <% mediaSet.forEach(function(mediaItem){ %>
-          <%- include('mediaTile.ejs', {media: mediaItem}) %>
-        <% }); %>
+<section class="carousel carousel_horizontal">
+    <% mediaSets.forEach(function (mediaSet, index) { %>
+    <div class="col-md-8 col-md-offset-2 carouselItem <%= index === 1 ? 'active' : '' %>">
+        <section class="carousel carousel_vertical">
+            <% mediaSet.forEach(function (mediaItem) { %>
+              <%- include('mediaTile.ejs', {media: mediaItem}) %>
+            <% }); %>
+        </section>
     </div>
     <% }); %>
 </section>

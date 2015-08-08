@@ -7,6 +7,8 @@
  var request = require('request');
  var _ = require('lodash');
 
+ require('shelljs/global');
+
  var promiseHttpGet = function promiseHttpGet(url) {
      return new Promise(function (resolve, reject) {
          request(
@@ -46,10 +48,10 @@ module.exports = function (request, response) {
             });
     };
 
-    if (process.env.NODE_ENV === 'development') {
+    // if (process.env.NODE_ENV === 'development') {
         exec('gulp build', {async: true}, processApiResults);
-    } else {
-        processApiResults();
-    }
+    // } else {
+        // processApiResults();
+    // }
 
 };
