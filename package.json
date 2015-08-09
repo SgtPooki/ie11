@@ -1,36 +1,35 @@
 {
-  "name": "ie11",
-  "version": "0.0.1",
-  "description": "Image explorer eleven. Named ie11 just for fun.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "gulp build"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/SgtPooki/ie11.git"
-  },
-  "author": "Russell Dempsey <SgtPooki@gmail.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/SgtPooki/ie11/issues"
-  },
-  "homepage": "https://github.com/SgtPooki/ie11.git",
-  "devDependencies": {
-    "eslint": "^1.0.0",
-    "glob": "^5.0.14",
-    "gulp": "^3.9.0",
-    "gulp-browserify": "^0.5.1",
-    "gulp-sass": "^2.0.4",
-    "lodash": "^3.10.1"
-  },
-  "dependencies": {
-    "ejs": "^2.3.3",
-    "express": "^4.13.3",
-    "lodash": "^3.10.1",
-    "promise": "^7.0.4",
-    "request": "^2.60.0",
-    "shelljs": "^0.5.1"
-  }
+    "name": "ie11",
+    "version": "0.0.1",
+    "description": "Image explorer eleven. Named ie11 just for fun.",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "postinstall": "gulp build"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/SgtPooki/ie11.git"
+    },
+    "author": "Russell Dempsey <SgtPooki@gmail.com>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/SgtPooki/ie11/issues"
+    },
+    "homepage": "https://github.com/SgtPooki/ie11.git",
+    "devDependencies": {},
+    "dependencies": {
+        "ejs": "^2.3.3",
+        "express": "^4.13.3",
+        "lodash": "^3.10.1",
+        "promise": "^7.0.4",
+        "request": "^2.60.0",
+        "shelljs": "^0.5.1",
+        "eslint": "^1.0.0",
+        "glob": "^5.0.14",
+        "gulp": "^3.9.0",
+        "gulp-browserify": "^0.5.1",
+        "gulp-sass": "^2.0.4",
+        "lodash": "^3.10.1"
+    }
 }
