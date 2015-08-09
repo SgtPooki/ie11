@@ -36,8 +36,13 @@ module.exports = function (request, response) {
                     .map(JSON.parse)
                     .pluck('results')
                     .flatten()
-                    .pluck('gallery')
-                    .pluck('photos')
+                    .map(function (item) {
+                        return {
+                            title: item.cover_Headline,
+                            description: item.summary,
+                            photos: _.get(item, 'gallery.photos')
+                        };
+                    })
                     .value();
 
                 response.render('pages/index', {photos: photos});

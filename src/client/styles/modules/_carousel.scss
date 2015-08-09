@@ -1,4 +1,15 @@
 
-.carouselItem:not(.active) {
+.carousel {
+}
+
+.carousel-item:not(.active):not(.carousel-item_nested) {
     display: none;
+}
+
+.carousel-item_nested:not(.active) {
+    display: none;
+}
+
+.carousel-item.active {
+    transition: all .5s ease-in-out;
 }

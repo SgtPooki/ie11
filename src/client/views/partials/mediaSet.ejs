@@ -1,11 +1,15 @@
-<section class="carousel carousel_horizontal">
+<section class="carousel js-outerCarousel">
     <% mediaSets.forEach(function (mediaSet, index) { %>
-    <div class="col-md-8 col-md-offset-2 carouselItem <%= index === 1 ? 'active' : '' %>">
-        <section class="carousel carousel_vertical">
-            <% mediaSet.forEach(function (mediaItem) { %>
-              <%- include('mediaTile.ejs', {media: mediaItem}) %>
+    <div class="col-md-10 col-md-offset-1 carousel-item <%= index === 1 ? 'active' : '' %>">
+        <h1><%= mediaSet.title %></h1>
+        <section class="carousel js-innerCarousel">
+            <% mediaSet.photos.forEach(function (mediaItem) { %>
+                <div class="carousel-item carousel-item_nested">
+                    <%- include('mediaTile.ejs', {media: mediaItem}) %>
+                </div>
             <% }); %>
         </section>
+        <p><%= mediaSet.description %></p>
     </div>
     <% }); %>
 </section>
