@@ -1,2 +1,2 @@
 # ie11
-Image explorer eleven. named ie11 just for fun.
+Image explorer eleven. Named ie11 just for fun.
