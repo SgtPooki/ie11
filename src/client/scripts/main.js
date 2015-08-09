@@ -4,7 +4,9 @@
  * @author Russell Dempsey <SgtPooki@gmail.com>
  */
 
-var Carousel = require('./carousel.js');
+var Carousel = require('./carousel');
+
+require('./imageExpander');
 
 var mainCarousel = new Carousel({
     parentSelector: '.js-outerCarousel',
