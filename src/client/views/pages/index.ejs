@@ -1,34 +1,31 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <%- include('../partials/header.ejs') %>
+    <%- include('../partials/header.ejs') %>
 </head>
 
 <body>
 
-  <!-- <% include ../partials/nav.ejs %> -->
+    <div class="container">
+        <div class="row">
+            <%- include('../partials/mediaSet.ejs', {mediaSets: photos}) %>
+        </div>
+    </div>
+    <div class="jumbotron text-center">
+        <div class="container stickyHeader">
+            <h1>Checkout the images above</h1>
+            <p>
+                Click on an image to enlarge it
+                <br/> Use arrow keys to navigate up or down through images in a set
+                <br/> Use arrow keys to navigate left or right through sets
+            </p>
+            <a type="button" class="btn btn-lg btn-primary" href="https://github.com/SgtPooki/ie11">
+                <span class="glyphicon glyphicon-download"></span> Source on GitHub</a>
+        </div>
+    </div>
 
-<div class="jumbotron text-center">
-  <div class="container">
-    <h1>Checkout the images below</h1>
-    <p>
-        Click on an image to enlarge it<br/>
-        Swipe or use arrow keys to navigate up or down through images in a set<br/>
-        Swipe or use arrow keys to navigate left or right through sets
-    </p>
-    <a type="button" class="btn btn-lg btn-primary" href="https://github.com/SgtPooki/ie11"><span class="glyphicon glyphicon-download"></span> Source on GitHub</a>
-  </div>
-</div>
-<div class="container">
-  <div class="row">
-      <% photos.forEach(function(photoSet){ %>
-          <div class="col-md-4">
-              <%- include('../partials/mediaSet.ejs', {mediaSet: photoSet}) %>
-          </div>
-      <% }); %>
-  </div>
-</div>
-
-
+    <%- include('../partials/footer.ejs') %>
 </body>
+
 </html>
